@@ -1,0 +1,11 @@
+{
+  "name": "GameDetector",
+  "version": "0.0.1",
+  "description": "Detects if someone plays a game and sends a discord message",
+  "main": "index.js",
+  "author": "gatchrat",
+  "dependencies": {
+    "web-api-steam": "^1.0.8",
+    "discord.js": "^11.1.0"
+  }
+}

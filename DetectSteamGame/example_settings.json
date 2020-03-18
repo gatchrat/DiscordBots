@@ -1,0 +1,22 @@
+{
+	"steam": {
+		"profileID": "761234",
+		"gameID": "1234",
+		"apiKey":"1234"
+
+	},
+	"discord": {
+		"channelID":"1234",
+		"botToken":"1.2.3",
+		"peopleToPing":[
+			{
+				"id":"<@123>"
+			},
+			{
+				"id":"<@123>"
+			}
+		],
+		"message":"Hi"
+	}
+	
+}
