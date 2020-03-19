@@ -4,6 +4,7 @@
   "description": "Detects if someone plays a game and sends a discord message",
   "main": "index.js",
   "author": "gatchrat",
+  "contributors": ["nikoreos"],
   "dependencies": {
     "web-api-steam": "^1.0.8",
     "discord.js": "^11.1.0"
