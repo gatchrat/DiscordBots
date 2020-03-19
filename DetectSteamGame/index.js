@@ -25,7 +25,7 @@ function check() {
 				const channel = bot.channels.get(settings.discord.channelID);
 				var message = "";
 				settings.discord.peopleToPing.forEach(person => {
-					message += person.id;
+					message += person.id + " ";
 				});
 				message += " " + settings.discord.message;
 				channel.send(message);
