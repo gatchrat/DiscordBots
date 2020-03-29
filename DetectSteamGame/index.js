@@ -18,7 +18,7 @@ bot.on('ready', function (evt) {
 bot.on('message', message => {
 	if(message.channel.id == settings.discord.channelID){
 		if(message.content.startsWith('!')){
-			if(message.content.endsWith('register')){
+			if(message.content == ('!register')){
 				let userId = message.author.id;
 				
 				let containsId = false;
@@ -29,7 +29,7 @@ bot.on('message', message => {
 				});
 
 				if(!containsId){
-					settings.discord.peopleToPing.push({id: userId});
+					settings.discord.peopleToPing.push({id: "<@" + userId + ">"});
 					fs.writeFile('settings.json', JSON.stringify(settings, null, '\t'), function(error){
 						if(error){
 							console.log("Error saving file " + error.message);
