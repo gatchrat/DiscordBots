@@ -15,6 +15,32 @@ bot.on('ready', function (evt) {
 	setInterval(check, checkTimerinSec * 1000);
 });
 
+bot.on('message', message => {
+	if(message.channel.id == settings.discord.channelID){
+		if(message.content.startsWith('!')){
+			if(message.content.endsWith('register')){
+				let userId = message.author.id;
+				
+				let containsId = false;
+				settings.discord.peopleToPing.forEach(person => {
+					if(person.id == userId){
+						containsId = true;
+					}
+				});
+
+				if(!containsId){
+					settings.discord.peopleToPing.push({id: userId});
+					fs.writeFile('settings.json', JSON.stringify(settings, null, '\t'), function(error){
+						if(error){
+							console.log("Error saving file " + error.message);
+						}
+					})
+				}
+			}
+		}
+	}
+});
+
 async function asyncForEach(array, callback) {
 	for (let index = 0; index < array.length; index++) {
 	  await callback(array[index], index, array);
