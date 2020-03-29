@@ -1,6 +1,6 @@
 {
   "name": "GameDetector",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Detects if someone plays a game and sends a discord message",
   "main": "index.js",
   "author": "gatchrat",
